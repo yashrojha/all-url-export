@@ -1,0 +1,612 @@
+/**
+ * All URL Export - Admin Styles
+ *
+ * @package All_URL_Export
+ */
+
+/* ============================================
+   Variables
+   ============================================ */
+:root {
+    --aue-primary: #2271b1;
+    --aue-primary-hover: #135e96;
+    --aue-success: #00a32a;
+    --aue-warning: #dba617;
+    --aue-error: #d63638;
+    --aue-gray-100: #f6f7f7;
+    --aue-gray-200: #e7e8e9;
+    --aue-gray-300: #c3c4c7;
+    --aue-gray-400: #8c8f94;
+    --aue-gray-500: #646970;
+    --aue-gray-600: #50575e;
+    --aue-gray-700: #3c434a;
+    --aue-gray-800: #2c3338;
+    --aue-border-radius: 8px;
+    --aue-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --aue-transition: all 0.2s ease;
+}
+
+/* ============================================
+   Main Container
+   ============================================ */
+.aue-wrap {
+    max-width: 1600px;
+    margin: 20px 20px 20px 0;
+}
+
+.aue-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--aue-gray-800);
+    margin-bottom: 24px;
+}
+
+.aue-title .dashicons {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    color: var(--aue-primary);
+}
+
+.aue-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 1200px) {
+    .aue-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   Settings Panel
+   ============================================ */
+.aue-settings-panel {
+    background: #fff;
+    border: 1px solid var(--aue-gray-200);
+    border-radius: var(--aue-border-radius);
+    box-shadow: var(--aue-box-shadow);
+    padding: 0;
+}
+
+/* ============================================
+   Sections
+   ============================================ */
+.aue-section {
+    padding: 24px;
+    border-bottom: 1px solid var(--aue-gray-200);
+}
+
+.aue-section:last-of-type {
+    border-bottom: none;
+}
+
+.aue-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--aue-gray-800);
+    margin: 0 0 8px 0;
+}
+
+.aue-section-title .dashicons {
+    color: var(--aue-primary);
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.aue-toggle-links {
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.aue-toggle-links a {
+    text-decoration: none;
+    color: var(--aue-primary);
+}
+
+.aue-toggle-links a:hover {
+    text-decoration: underline;
+}
+
+.aue-section-desc {
+    color: var(--aue-gray-500);
+    font-size: 13px;
+    margin: 0 0 16px 0;
+}
+
+/* ============================================
+   Checkbox Grid
+   ============================================ */
+.aue-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.aue-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: var(--aue-gray-100);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--aue-transition);
+}
+
+.aue-checkbox-label:hover {
+    background: var(--aue-gray-200);
+}
+
+.aue-checkbox-label input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.aue-checkbox-label input[type="checkbox"]:checked + .aue-checkbox-text {
+    color: var(--aue-primary);
+    font-weight: 500;
+}
+
+.aue-checkbox-text {
+    flex: 1;
+    font-size: 13px;
+    color: var(--aue-gray-700);
+}
+
+.aue-post-count {
+    font-size: 11px;
+    color: var(--aue-gray-400);
+}
+
+/* ============================================
+   Radio Groups
+   ============================================ */
+.aue-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.aue-radio-label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 16px;
+    background: var(--aue-gray-100);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--aue-transition);
+    border: 2px solid transparent;
+}
+
+.aue-radio-label:hover {
+    background: var(--aue-gray-200);
+}
+
+.aue-radio-label input[type="radio"] {
+    margin: 2px 0 0 0;
+    cursor: pointer;
+}
+
+.aue-radio-label input[type="radio"]:checked ~ .aue-radio-text {
+    color: var(--aue-primary);
+    font-weight: 500;
+}
+
+.aue-radio-label:has(input[type="radio"]:checked) {
+    border-color: var(--aue-primary);
+    background: #f0f6fc;
+}
+
+.aue-radio-text {
+    font-size: 14px;
+    color: var(--aue-gray-700);
+}
+
+.aue-radio-desc {
+    width: 100%;
+    font-size: 12px;
+    color: var(--aue-gray-500);
+    padding-left: 24px;
+    margin-top: -4px;
+}
+
+/* ============================================
+   WPML Section
+   ============================================ */
+.aue-wpml-section {
+    background: linear-gradient(135deg, #f0f6fc 0%, #fff 100%);
+}
+
+.aue-wpml-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.aue-checkbox-large {
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid var(--aue-gray-200);
+}
+
+.aue-checkbox-large .aue-checkbox-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.aue-wpml-languages {
+    padding: 16px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid var(--aue-gray-200);
+}
+
+.aue-languages-label {
+    font-size: 12px;
+    color: var(--aue-gray-500);
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.aue-language-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.aue-language-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--aue-gray-100);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--aue-gray-700);
+}
+
+.aue-language-tag.aue-default-lang {
+    background: #e6f4ea;
+    color: #137333;
+}
+
+.aue-flag {
+    width: 16px;
+    height: 12px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.aue-default-badge {
+    font-size: 10px;
+    padding: 2px 6px;
+    background: #137333;
+    color: #fff;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.aue-wpml-inactive {
+    background: var(--aue-gray-100);
+}
+
+.aue-notice-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 16px;
+    background: #fff;
+    border-left: 4px solid var(--aue-primary);
+    border-radius: 4px;
+    margin: 0;
+    color: var(--aue-gray-600);
+    font-size: 13px;
+}
+
+.aue-notice-info .dashicons {
+    color: var(--aue-primary);
+    margin-top: 2px;
+}
+
+/* ============================================
+   Action Buttons
+   ============================================ */
+.aue-actions {
+    display: flex;
+    gap: 12px;
+    padding: 24px;
+    background: var(--aue-gray-100);
+    border-top: 1px solid var(--aue-gray-200);
+}
+
+.aue-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    height: auto;
+    font-size: 14px;
+}
+
+.aue-actions .button .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.aue-actions .button-primary {
+    background: var(--aue-primary);
+    border-color: var(--aue-primary);
+}
+
+.aue-actions .button-primary:hover {
+    background: var(--aue-primary-hover);
+    border-color: var(--aue-primary-hover);
+}
+
+/* ============================================
+   Preview Panel
+   ============================================ */
+.aue-preview-panel {
+    background: #fff;
+    border: 1px solid var(--aue-gray-200);
+    border-radius: var(--aue-border-radius);
+    box-shadow: var(--aue-box-shadow);
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 200px);
+    position: sticky;
+    top: 46px;
+}
+
+.aue-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--aue-gray-200);
+    background: var(--aue-gray-100);
+}
+
+.aue-preview-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--aue-gray-800);
+    margin: 0;
+}
+
+.aue-preview-header .dashicons {
+    color: var(--aue-primary);
+}
+
+.aue-preview-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.aue-count-badge {
+    padding: 4px 10px;
+    background: var(--aue-primary);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.aue-count-badge:empty {
+    display: none;
+}
+
+.aue-preview-content {
+    flex: 1;
+    overflow: auto;
+    padding: 0;
+}
+
+.aue-preview-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    color: var(--aue-gray-400);
+    text-align: center;
+    padding: 40px;
+}
+
+.aue-preview-placeholder .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.aue-preview-placeholder p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ============================================
+   Preview Table
+   ============================================ */
+.aue-table-wrapper {
+    overflow-x: auto;
+}
+
+.aue-preview-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.aue-preview-table th,
+.aue-preview-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--aue-gray-200);
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.aue-preview-table th {
+    background: var(--aue-gray-100);
+    font-weight: 600;
+    color: var(--aue-gray-700);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.aue-preview-table tr:hover td {
+    background: var(--aue-gray-100);
+}
+
+.aue-preview-table td:first-child {
+    font-weight: 500;
+    color: var(--aue-gray-800);
+}
+
+.aue-preview-note {
+    padding: 12px 16px;
+    background: #fffbe6;
+    border-top: 1px solid #ffe58f;
+    font-size: 12px;
+    color: #ad8b00;
+    margin: 0;
+    text-align: center;
+}
+
+/* ============================================
+   Error Message
+   ============================================ */
+.aue-error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    color: var(--aue-error);
+}
+
+.aue-error-message .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+}
+
+.aue-error-message p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ============================================
+   Loading Overlay
+   ============================================ */
+.aue-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 100000;
+}
+
+.aue-loading-overlay.active {
+    display: flex;
+}
+
+.aue-loading-overlay p {
+    font-size: 14px;
+    color: var(--aue-gray-600);
+    margin: 0;
+}
+
+.aue-spinner {
+    width: 48px;
+    height: 48px;
+    position: relative;
+}
+
+.aue-spinner-inner {
+    width: 100%;
+    height: 100%;
+    border: 4px solid var(--aue-gray-200);
+    border-top-color: var(--aue-primary);
+    border-radius: 50%;
+    animation: aue-spin 1s linear infinite;
+}
+
+@keyframes aue-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 782px) {
+    .aue-wrap {
+        margin: 10px;
+    }
+    
+    .aue-title {
+        font-size: 22px;
+    }
+    
+    .aue-checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .aue-actions {
+        flex-direction: column;
+    }
+    
+    .aue-actions .button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .aue-preview-panel {
+        position: static;
+        max-height: 500px;
+    }
+}
+
+/* ============================================
+   Dark Mode Support (if WordPress adds it)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    .aue-wrap {
+        /* Variables can be overridden here for dark mode */
+    }
+}
