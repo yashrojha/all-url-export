@@ -3,7 +3,7 @@
  * Plugin Name: All URL Export
  * Plugin URI: http://ifoxsolutions.com/
  * Description: Export all post types with customizable fields including title, H1, content, dates, author, and WPML translations.
- * Version: 1.0.1
+ * Version: 1.2.1
  * Author: Yash Ojha
  * Author URI: https://ifoxsolutions.com
  * License: GPL v2 or later
